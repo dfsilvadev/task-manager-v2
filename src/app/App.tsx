@@ -1,5 +1,5 @@
 function App() {
-  return <div className="text-red-500 border p-4">task manager</div>;
+  return <div className="border p-4 text-red-500">task manager</div>;
 }
 
 export default App;
