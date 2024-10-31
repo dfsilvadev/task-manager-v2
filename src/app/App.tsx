@@ -1,5 +1,11 @@
+import { Sidebar } from "@/components";
+
 function App() {
-  return <div className="border p-4 text-red-500">task manager</div>;
+  return (
+    <div>
+      <Sidebar />
+    </div>
+  );
 }
 
 export default App;
