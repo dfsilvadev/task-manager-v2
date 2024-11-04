@@ -1,13 +1,15 @@
-import { ButtonVariants, buttonVariantsStyles, Dependencies } from "./variants";
+import { LinkVariantsStyles } from "./variants";
+
+import { Dependencies, LinkVariants } from "./types";
 
 const Link = ({
   children,
-  variant = ButtonVariants.DEFAULT,
+  variant = LinkVariants.DEFAULT,
   icon,
   ...props
 }: Dependencies) => {
   return (
-    <a className={buttonVariantsStyles({ variant })} {...props}>
+    <a className={LinkVariantsStyles({ variant })} {...props}>
       {icon && <span className="flex-shrink-0 text-2xl">{icon}</span>}
       {children}
     </a>
