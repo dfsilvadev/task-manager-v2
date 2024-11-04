@@ -1,3 +1,8 @@
+import { Plus, Trash } from "@phosphor-icons/react";
+import Button from "../Button";
+
+import { ButtonSizes, ButtonVariants } from "../Button/types";
+
 const Tasks = () => {
   return (
     <div className="w-full border px-8 py-16">
@@ -9,7 +14,18 @@ const Tasks = () => {
           <h2 className="text-xl font-semibold">Minhas tarefas</h2>
         </div>
 
-        <div>Buttons</div>
+        <div className="flex items-center gap-3">
+          <Button
+            variant={ButtonVariants["GHOST"]}
+            size={ButtonSizes["SMALL"]}
+            icon={<Trash weight="bold" />}
+          >
+            Limpar tarefa
+          </Button>
+          <Button size={ButtonSizes["SMALL"]} icon={<Plus weight="bold" />}>
+            Nova tarefa
+          </Button>
+        </div>
       </div>
     </div>
   );
