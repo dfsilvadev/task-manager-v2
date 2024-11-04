@@ -2,6 +2,8 @@ import { ClipboardText, House } from "@phosphor-icons/react";
 
 import { NavLink } from "..";
 
+import { LinkVariants } from "../NavLink/types";
+
 const Sidebar = () => {
   return (
     <div className="h-screen w-64 bg-white">
@@ -14,7 +16,7 @@ const Sidebar = () => {
       </div>
 
       <div className="flex flex-col gap-2 p-2">
-        <NavLink href="#" variant="active" icon={<House />}>
+        <NavLink href="#" variant={LinkVariants["ACTIVE"]} icon={<House />}>
           Início
         </NavLink>
         <NavLink href="#" icon={<ClipboardText />}>
