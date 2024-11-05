@@ -2,7 +2,7 @@ import { ClipboardText, House } from "@phosphor-icons/react";
 
 import { NavLink } from "..";
 
-import { LinkVariants } from "../NavLink/types";
+import { LinkVariants } from "./ui/NavLink/types";
 
 const Sidebar = () => {
   return (
