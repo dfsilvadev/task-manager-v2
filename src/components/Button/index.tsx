@@ -12,7 +12,7 @@ const Button = ({
   return (
     <button {...props} className={buttonVariantsStyles({ variant, size })}>
       {children}
-      {icon && <span className="flex-shrink-0 text-xl">{icon}</span>}
+      {icon && <span className="flex-shrink-0 text-lg">{icon}</span>}
     </button>
   );
 };
