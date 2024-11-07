@@ -1,11 +1,37 @@
+import { useMemo, useState } from "react";
 import { Moon, Plus, Sun, SunHorizon, Trash } from "@phosphor-icons/react";
-import Button from "../Button";
 
-import Header from "./ui/Header";
+import Button from "../Button";
+import { Header, TaskItem } from "./ui";
+
+import { tasks } from "./mocks";
 
 import { ButtonSizes, ButtonVariants } from "../Button/types";
+import { Task } from "./model/tasks";
 
 const Tasks = () => {
+  const [task] = useState<Task[]>(tasks);
+
+  const groupTasksByDaySchedule = useMemo(
+    () =>
+      tasks.reduce(
+        (acc, task) => {
+          if (!acc[task.schedule]) {
+            acc[task.schedule] = [];
+          }
+          acc[task.schedule].push(task);
+          return acc;
+        },
+        {
+          morning: [] as Task[],
+          afternoon: [] as Task[],
+          night: [] as Task[],
+        }
+      ),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [task]
+  );
+
   return (
     <div className="w-full space-y-6 border px-8 py-16">
       <div className="flex w-full justify-between">
@@ -33,14 +59,26 @@ const Tasks = () => {
       <div className="space-y-6 rounded-lg bg-white p-6">
         <div className="space-y-3">
           <Header icon={<Sun />}>Manhã</Header>
+
+          {groupTasksByDaySchedule.morning.map(({ title, status, id }) => (
+            <TaskItem key={id} {...{ title, status }} />
+          ))}
         </div>
 
         <div className="space-y-3">
           <Header icon={<SunHorizon />}>Tarde</Header>
+
+          {groupTasksByDaySchedule.afternoon.map(({ title, status, id }) => (
+            <TaskItem key={id} {...{ title, status }} />
+          ))}
         </div>
 
         <div className="space-y-3">
           <Header icon={<Moon />}>Noite</Header>
+
+          {groupTasksByDaySchedule.night.map(({ title, status, id }) => (
+            <TaskItem key={id} {...{ title, status }} />
+          ))}
         </div>
       </div>
     </div>
