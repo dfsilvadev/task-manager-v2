@@ -1,6 +1,6 @@
 import { ClipboardText, House } from "@phosphor-icons/react";
 
-import { NavLink } from "..";
+import NavLink from "./ui/NavLink/";
 
 import { LinkVariants } from "./ui/NavLink/types";
 
