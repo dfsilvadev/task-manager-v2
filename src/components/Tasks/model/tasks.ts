@@ -1,7 +1,7 @@
 export enum TaskSchedule {
   MORNING = "morning",
   AFTERNOON = "afternoon",
-  NIGHT = "night",
+  EVENING = "evening",
 }
 
 export enum TaskStatus {

@@ -20,6 +20,6 @@ export const tasks: Task[] = [
     title: "Estudar TypeScript",
     description: "Estudar os fundamentos do TypeScript",
     status: TaskStatus.NOT_STARTED,
-    schedule: TaskSchedule.NIGHT,
+    schedule: TaskSchedule.EVENING,
   },
 ];

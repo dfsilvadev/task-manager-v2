@@ -1,4 +1,6 @@
+import { Task, TaskStatus } from "../../model/tasks";
+
 export type Dependencies = {
-  readonly title: string;
-  readonly status?: "completed" | "in_progress" | "not_started";
+  readonly task: Task;
+  readonly handleOnClick: (id: number, status: TaskStatus) => void;
 };
