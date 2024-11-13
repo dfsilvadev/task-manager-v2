@@ -6,8 +6,9 @@ export const LinkVariantsStyles = cva(
   {
     variants: {
       variant: {
-        [LinkVariants.DEFAULT]: "text-[#35383E]",
-        [LinkVariants.ACTIVE]: "rounded-lg bg-[#E6F7FB] text-[#00ADB5] ",
+        [LinkVariants.DEFAULT]: "text-brand-dark-blue",
+        [LinkVariants.ACTIVE]:
+          "rounded-lg bg-brand-background text-brand-primary ",
       },
     },
     defaultVariants: {

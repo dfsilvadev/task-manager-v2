@@ -8,10 +8,12 @@ const Sidebar = () => {
   return (
     <div className="h-screen w-72 bg-white">
       <div className="space-y-4 px-8 py-6">
-        <h1 className="text-xl font-semibold text-[#00ADB5]">Task Manager</h1>
+        <h1 className="text-xl font-semibold text-brand-primary">
+          Task Manager
+        </h1>
         <p className="text-xs">
           Organize suas{" "}
-          <span className="font-semibold text-[#00ADB5]">tarefas</span>
+          <span className="font-semibold text-brand-primary">tarefas</span>
         </p>
       </div>
 

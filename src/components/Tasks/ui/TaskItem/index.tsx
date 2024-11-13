@@ -22,12 +22,12 @@ const TaskItem = ({
         {task.title}
       </div>
 
-      <div className="flex items-center justify-center gap-4 px-4 text-[#9A9C9F] transition">
+      <div className="flex items-center justify-center gap-4 px-4 text-brand-text-gray transition">
         <button type="button" onClick={() => handleToggleModal(task)}>
-          <Trash size={20} className="hover:text-[#EF4444]" />
+          <Trash size={20} className="hover:text-brand-danger" />
         </button>
 
-        <a className="transition hover:text-[#00ADB5]">
+        <a className="transition hover:text-brand-primary">
           <ArrowSquareOut size={20} />
         </a>
       </div>

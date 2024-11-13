@@ -82,7 +82,7 @@ const Tasks = () => {
       <div className="w-full space-y-6 px-8 py-16">
         <div className="flex w-full justify-between">
           <div>
-            <span className="text-xs font-semibold text-[#00ADB5]">
+            <span className="text-xs font-semibold text-brand-primary">
               Minhas tarefas
             </span>
             <h2 className="text-xl font-semibold">Minhas tarefas</h2>
@@ -102,13 +102,13 @@ const Tasks = () => {
           </div>
         </div>
 
-        <div className="space-y-6 rounded-lg bg-white p-6">
+        <div className="space-y-6 rounded-lg bg-brand-white p-6">
           <div className="space-y-3">
             <Header icon={<Sun />}>Manhã</Header>
 
             {[...groupTasksByDaySchedule.morning.values()].length === 0 ? ( //TODO: refatorar map de tarefas
               // TODO: criar um componente de tarefa vazia
-              <div className="flex items-center gap-2 text-[#9A9C9F]">
+              <div className="flex items-center gap-2 text-brand-text-gray">
                 <Clipboard size={20} weight="bold" />
                 <p className="text-xs">
                   Nenhuma tarefa cadastrada para esse período.
@@ -130,7 +130,7 @@ const Tasks = () => {
             <Header icon={<SunHorizon />}>Tarde</Header>
 
             {[...groupTasksByDaySchedule.afternoon.values()].length === 0 ? (
-              <div className="flex items-center gap-2 text-[#9A9C9F]">
+              <div className="flex items-center gap-2 text-brand-text-gray">
                 <Clipboard size={20} weight="bold" />
                 <p className="text-xs">
                   Nenhuma tarefa cadastrada para esse período.
@@ -152,7 +152,7 @@ const Tasks = () => {
             <Header icon={<Moon />}>Noite</Header>
 
             {[...groupTasksByDaySchedule.evening.values()].length === 0 ? (
-              <div className="flex items-center gap-2 text-[#9A9C9F]">
+              <div className="flex items-center gap-2 text-brand-text-gray">
                 <Clipboard size={20} weight="bold" />
                 <p className="text-xs">
                   Nenhuma tarefa cadastrada para esse período.
