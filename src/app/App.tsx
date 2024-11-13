@@ -1,11 +1,16 @@
+import { Toaster } from "sonner";
+
 import { Sidebar, Tasks } from "@/components";
 
 function App() {
   return (
-    <div className="flex">
-      <Sidebar />
-      <Tasks />
-    </div>
+    <>
+      <Toaster richColors position="top-center" />
+      <div className="flex">
+        <Sidebar />
+        <Tasks />
+      </div>
+    </>
   );
 }
 
