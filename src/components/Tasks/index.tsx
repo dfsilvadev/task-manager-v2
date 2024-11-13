@@ -13,7 +13,7 @@ import { Task, TaskStatus } from "./model/tasks";
 import { TasksBySchedule } from "./types";
 
 const Tasks = () => {
-  const [map, { set }] = useMap<number, Task>({
+  const [map, { set, remove }] = useMap<number, Task>({
     tasks,
     key: (task) => task.id,
   });
@@ -30,6 +30,10 @@ const Tasks = () => {
 
     const newStatus = toggleStatus[taskStatus];
     set(taskId, { ...nextTask, status: newStatus });
+  };
+
+  const deleteTask = (taskId: number): void => {
+    remove(taskId);
   };
 
   const groupTasksByDaySchedule = useMemo(() => {
@@ -79,7 +83,8 @@ const Tasks = () => {
             <TaskItem
               key={task.id}
               {...{ task }}
-              handleOnClick={toggleTaskStatus}
+              handleToggleTaskStatus={toggleTaskStatus}
+              handleDeleteTask={deleteTask}
             />
           ))}
         </div>
@@ -91,7 +96,8 @@ const Tasks = () => {
             <TaskItem
               key={task.id}
               {...{ task }}
-              handleOnClick={toggleTaskStatus}
+              handleToggleTaskStatus={toggleTaskStatus}
+              handleDeleteTask={deleteTask}
             />
           ))}
         </div>
@@ -103,7 +109,8 @@ const Tasks = () => {
             <TaskItem
               key={task.id}
               {...{ task }}
-              handleOnClick={toggleTaskStatus}
+              handleToggleTaskStatus={toggleTaskStatus}
+              handleDeleteTask={deleteTask}
             />
           ))}
         </div>
