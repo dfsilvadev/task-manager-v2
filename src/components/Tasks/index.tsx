@@ -83,8 +83,8 @@ const Tasks = () => {
             <TaskItem
               key={task.id}
               {...{ task }}
-              handleToggleTaskStatus={toggleTaskStatus}
-              handleDeleteTask={deleteTask}
+              handleToggleStatus={toggleTaskStatus}
+              handleDelete={deleteTask}
             />
           ))}
         </div>
@@ -96,8 +96,8 @@ const Tasks = () => {
             <TaskItem
               key={task.id}
               {...{ task }}
-              handleToggleTaskStatus={toggleTaskStatus}
-              handleDeleteTask={deleteTask}
+              handleToggleStatus={toggleTaskStatus}
+              handleDelete={deleteTask}
             />
           ))}
         </div>
@@ -109,8 +109,8 @@ const Tasks = () => {
             <TaskItem
               key={task.id}
               {...{ task }}
-              handleToggleTaskStatus={toggleTaskStatus}
-              handleDeleteTask={deleteTask}
+              handleToggleStatus={toggleTaskStatus}
+              handleDelete={deleteTask}
             />
           ))}
         </div>

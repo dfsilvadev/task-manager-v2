@@ -6,24 +6,20 @@ import { taskItemStyles } from "./variants";
 
 import { Dependencies } from "./types";
 
-const TaskItem = ({
-  task,
-  handleToggleTaskStatus,
-  handleDeleteTask,
-}: Dependencies) => {
+const TaskItem = ({ task, handleToggleStatus, handleDelete }: Dependencies) => {
   return (
     <div className={taskItemStyles({ status: task.status })}>
       <div className="flex items-center gap-2">
         <Checkbox
           {...{ status: task.status }}
-          onClick={() => handleToggleTaskStatus(task.id, task.status)}
+          onClick={() => handleToggleStatus(task.id, task.status)}
         />
 
         {task.title}
       </div>
 
       <div className="flex items-center justify-center gap-4 px-4 text-[#9A9C9F] transition">
-        <button type="button" onClick={() => handleDeleteTask(task.id)}>
+        <button type="button" onClick={() => handleDelete(task.id)}>
           <Trash size={20} className="hover:text-[#EF4444]" />
         </button>
 

@@ -2,6 +2,6 @@ import { Task, TaskStatus } from "../../model/tasks";
 
 export type Dependencies = {
   readonly task: Task;
-  readonly handleToggleTaskStatus: (id: number, status: TaskStatus) => void;
-  readonly handleDeleteTask: (id: number) => void;
+  readonly handleToggleStatus: (id: number, status: TaskStatus) => void;
+  readonly handleDelete: (id: number) => void;
 };
