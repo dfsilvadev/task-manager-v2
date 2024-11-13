@@ -6,7 +6,11 @@ import { taskItemStyles } from "./variants";
 
 import { Dependencies } from "./types";
 
-const TaskItem = ({ task, handleToggleStatus, handleDelete }: Dependencies) => {
+const TaskItem = ({
+  task,
+  handleToggleStatus,
+  handleToggleModal,
+}: Dependencies) => {
   return (
     <div className={taskItemStyles({ status: task.status })}>
       <div className="flex items-center gap-2">
@@ -19,7 +23,7 @@ const TaskItem = ({ task, handleToggleStatus, handleDelete }: Dependencies) => {
       </div>
 
       <div className="flex items-center justify-center gap-4 px-4 text-[#9A9C9F] transition">
-        <button type="button" onClick={() => handleDelete(task.id)}>
+        <button type="button" onClick={() => handleToggleModal(task)}>
           <Trash size={20} className="hover:text-[#EF4444]" />
         </button>
 
