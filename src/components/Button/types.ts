@@ -15,8 +15,8 @@ export enum ButtonSizes {
 }
 
 export type Dependencies = {
-  children: ReactNode;
-  variant?: ButtonVariants;
-  size?: ButtonSizes;
-  icon?: ReactNode;
+  readonly children: ReactNode;
+  readonly variant?: ButtonVariants;
+  readonly size?: ButtonSizes;
+  readonly icon?: ReactNode;
 } & ButtonProps;

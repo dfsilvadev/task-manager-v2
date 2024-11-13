@@ -6,7 +6,7 @@ import { LinkVariants } from "./ui/NavLink/types";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen w-64 bg-white">
+    <div className="h-screen w-72 bg-white">
       <div className="space-y-4 px-8 py-6">
         <h1 className="text-xl font-semibold text-[#00ADB5]">Task Manager</h1>
         <p className="text-xs">
