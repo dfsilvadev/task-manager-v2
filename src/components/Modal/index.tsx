@@ -27,21 +27,21 @@ const Modal = ({
       {trigger && <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>}
 
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 bg-[#35383E]/60 backdrop-blur-sm" />
+        <Dialog.Overlay className="fixed inset-0 bg-brand-dark-blue/60 backdrop-blur-sm" />
 
-        <Dialog.Content className="fixed left-2/4 top-2/4 w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-white p-6">
+        <Dialog.Content className="fixed left-2/4 top-2/4 w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-brand-white p-6">
           <header className="flex items-center justify-between">
             <Dialog.Title>{title}</Dialog.Title>
-            <Dialog.Close className="text-[#9A9C9F] hover:text-[#EF4444]">
+            <Dialog.Close className="text-brand-text-gray hover:text-brand-danger">
               <X weight="bold" />
             </Dialog.Close>
           </header>
 
-          <Dialog.Description className="mx-3 mb-0 mt-3 flex items-center gap-2 text-sm text-[#9A9C9F]">
+          <Dialog.Description className="mx-3 mb-0 mt-3 flex items-center gap-2 text-sm text-brand-text-gray">
             <WarningOctagon
               size={20}
               weight="bold"
-              className="text-[#FFAA04]"
+              className="text-brand-process"
             />
             {children}
           </Dialog.Description>

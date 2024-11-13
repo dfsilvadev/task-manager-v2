@@ -5,9 +5,9 @@ export const taskItemStyles = cva(
   {
     variants: {
       status: {
-        completed: "text=[#002C2E] bg-[#00ADB5] ",
-        in_progress: "bg-[#FFAA04] text-[#FFAA04]",
-        not_started: "bg-[#9A9C9F] text-[#35383E]",
+        completed: "text-brand-dark-green bg-brand-primary ",
+        in_progress: "bg-brand-process text-brand-process",
+        not_started: "bg-brand-text-gray text-brand-dark-blue",
       },
     },
   }
